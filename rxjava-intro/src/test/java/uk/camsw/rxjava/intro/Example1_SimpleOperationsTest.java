@@ -16,7 +16,7 @@ public class Example1_SimpleOperationsTest {
     @Before
     public void before() {
         // This is a test producer that you will see throughout these examples
-        // Don't worry about how it works, just note its behaviour can be tweaked
+        // Don't worry about how it works, just note that its behaviour can be tweaked
         // Here, for example, we produce a new item every 1 second, starting at zero
         producer = Producer.builder()
                 .withFrequency(Duration.ofSeconds(1))
