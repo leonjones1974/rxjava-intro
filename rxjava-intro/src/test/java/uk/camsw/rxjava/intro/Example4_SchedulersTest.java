@@ -59,7 +59,7 @@ public class Example4_SchedulersTest {
                 });
 
         // Done! The ordering across the 2 source streams is still non deterministic, but we have forced the observation
-        // of those streams onto a single event loop thread sowe at least know we are processing only one at a time
+        // of those streams onto a single event loop thread so we at least know we are processing only one at a time
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 
         // There are several 'out of the box' schedulers available.  Alternatively you can, as we have above,
