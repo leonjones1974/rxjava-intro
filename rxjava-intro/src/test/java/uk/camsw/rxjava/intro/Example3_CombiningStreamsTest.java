@@ -142,8 +142,8 @@ public class Example3_CombiningStreamsTest {
         // You should see a value from stream 1 being combined multiple times with different values from the
         // faster producing stream 2
 
-        // A one sided version of this operator exists.  Imagine a stream of 'leaders' from ordo, you could use
-        // a combine to ensure you always produced to the last known leader
+        // A one sided version of this operator exists.  Imagine a stream of 'leader' nodes, you could use
+        // a combine to ensure you always produced to the last known leader, avoiding unnecessary forwards
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
     }
 
