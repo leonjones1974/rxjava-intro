@@ -84,7 +84,7 @@ public class Example5_ManagingResourcesTest {
         //      - producer unsubscribed all it's /subscriptions, killing the polling scheduler
         //
         // DISCLAIMER: I'm sure someone with more knowledge of RX internals will correct me on the exact details of the above, but it illustrates the observed behaviour at least
-        // Please feel free to correct me to dig into the exact order of events and I will update this doc! ;)
+        // Please feel free to correct me and I will update this doc! ;)
         //
         // We would also see the same behaviour were the stream to error
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
