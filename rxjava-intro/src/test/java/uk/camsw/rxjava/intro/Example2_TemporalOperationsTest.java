@@ -22,7 +22,8 @@ public class Example2_TemporalOperationsTest {
 
     @Test
     public void buffer() {
-        // Let's take a reasonably simple sounding requirement - buffer items on the stream, emitting them as lists at a given frequency
+        // Let's take a reasonably simple sounding requirement - buffer items on the stream, emitting them as
+        // lists at a given frequency
         producer.asObservable()
                 .buffer(1, TimeUnit.SECONDS)
                 .map(list -> Lists.reverse(list))           // Still composable
@@ -43,18 +44,20 @@ public class Example2_TemporalOperationsTest {
                     System.out.println("list = " + list);
                 });
 
-        // Buffers are emitted by frequency, or when they are 'full' (full being 5 in this case)
+        // Now our buffers are emitted by frequency, or when they are 'full' (full being 5 in this case)
         // If you look at the outputs,
         //   - no race conditions
         //   - no missing events
+        //   - no blockingz
         //   - no checking of current state
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
     }
 
     @Test
     public void sample() {
-        // How about if my source stream was built for high frequency trading and is ticking prices at a rate faster than I want to consume?
-        // This example will give me the most up-to-date price every second, dropping any emitted in between
+        // How about if my source stream was built for high frequency trading and is ticking prices at a rate
+        // faster than I want to consume?
+        // This example will give me the most up-to-date price every second, dropping those emitted in the interim
         producer.asObservable()
                 .sample(1, TimeUnit.SECONDS)
                 .subscribe(n -> {

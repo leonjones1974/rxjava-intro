@@ -62,7 +62,8 @@ public class Example1_SimpleOperationsTest {
 
     @Test
     public void onErrorAndOnCompleted() {
-        // Before we proceed to other examples, we need to take a look at the other event handler functions that can be provided
+        // Before we proceed to other examples, we need to take a look at the other event handler functions
+        // that can be provided
         // Here's a subscription, providing handlers for all 3 RX events
         producer.asObservable()
                 .subscribe(
@@ -100,7 +101,8 @@ public class Example1_SimpleOperationsTest {
 
     @Test
     public void map() {
-        // We can map values in the stream.  Note, a clever use of generics gives us a type-safe sequence when we map from one type to another, i.e. Integer -> String
+        // We can map values in the stream.  Note, a clever use of generics gives us a type-safe sequence when
+        // we map from one type to another, i.e. Integer -> String
         producer.asObservable()
                 .map(n -> "value: " + n)
                 .map(s -> s.toUpperCase())
@@ -125,7 +127,8 @@ public class Example1_SimpleOperationsTest {
 
     @Test
     public void reducing_leftFold() {
-        // One of the things we will inevitably be doing in an event sourced architecture is folding over history to reconstitute current state
+        // One of the things we will inevitably be doing in an event sourced architecture is folding over
+        // history to reconstitute current state
         // In this example we provide a function that simply sums the first 3 items from a stream
         producer.asObservable()
                 .take(3)
