@@ -40,10 +40,8 @@ public class Example3_CombiningStreamsTest {
         // n = 1
         // n = 101
 
-        // Perhaps a real world use of this would be producer ID pattern matching in the ordo container?
         // If my callbacks become observables then I can begin to deal with them in different ways,
-        // without really usage specific writing code
-        // to demultiplex callbacks
+        // without writing usage specific code to demultiplex callbacks
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
     }
 
