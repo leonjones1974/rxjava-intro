@@ -101,7 +101,7 @@ public class Example5_ManagingResourcesTest {
 
     @Test
     public void multipleSubscribers() {
-        // In the real world it's quite likely that more than one subscriber is interestedin the values emitted
+        // In the real world it's quite likely that more than one subscriber is interested in the values emitted
         // from our legacy producer app
         // Lets subscribe to the observable twice, and see what happens
         Subscription subscription1 = producer.subscribe(n -> {
