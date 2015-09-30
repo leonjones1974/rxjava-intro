@@ -189,6 +189,8 @@ public class Example3_CombiningStreamsTest {
         // How can we solve it?
         //    - Uncomment the cache(1) line on the new stream.  Cache is an operator that will cache the last
         //     'n' emissions, thereby replaying them to late subscribers
+
+        // Q? Is there still a race condition?  Can more events be missed during concat?
         Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS);
     }
 
