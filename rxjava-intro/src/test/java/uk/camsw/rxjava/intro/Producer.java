@@ -23,7 +23,7 @@ public class Producer {
     public Observable<Integer> asObservable() {
         AtomicInteger sequence = new AtomicInteger(startFrom);
         return Observable.create(observer -> {
-            System.out.println("Starting producer");
+            System.out.println("Starting producer, starting from: " + startFrom);
             observer.add(Subscriptions.create(() -> System.out.println("Stopping producer")));
             observer.add(
                     Schedulers.io().createWorker().schedulePeriodically(() -> {

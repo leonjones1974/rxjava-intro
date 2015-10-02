@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.Arrays.asList;
 
-public class Example7_TestingTest {
+public class Example6_TestingTest {
 
     @Test
     public void simple() {

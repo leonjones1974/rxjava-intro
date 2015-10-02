@@ -1,3 +1,6 @@
-## A complex example
+## Testing
 
-So, let's take what we have learned so far and put it into a single, complex example
+A shameless plug for my own, open-source testing BDD style dsl appears in the section.  The ability to play with time 
+is an important part of testing async streams
+
+
